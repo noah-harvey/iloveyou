@@ -25,17 +25,23 @@
 
     <div id="content">
       <p style="font-size:2em;">I love you ❤️</p>
+      <button onclick="resetPage()">Back</button>
     </div>
 
     <script>
       function check() {
         const pw = document.getElementById('pw').value.toLowerCase().trim();
-        if (pw === "noah") { // <--- answer is not case-sensitive
+        if (pw === "noah") {
           document.getElementById('login').style.display = "none";
           document.getElementById('content').style.display = "block";
         } else {
           alert("Nope, try again!");
         }
+      }
+      function resetPage() {
+        document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+        document.getElementById('pw').value = "";
       }
     </script>
   </body>
